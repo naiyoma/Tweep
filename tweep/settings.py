@@ -9,9 +9,10 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
-from pathlib import Path
+import os
 import environ
+from pathlib import Path
+# import environ
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -130,9 +131,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'user.User'
 
-#Twitter
-env = environ.Env()
-environ.Env.read_env()
+# Twitter
+# env = environ.Env()
+# environ.Env.read_env()
+
+
+# export API_SECRET_KEY = "ZxXKs8gmfg6w61GIWkUhAfVV1HrI8S76oWbf6JMtk3jzJh9vRD"
+# export API_KEY = "yNtiYh9eA99AzeDAvj3eg8QcQ"
+# export BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAABuURQEAAAAAXL4HCaEJyePzYh3o2M % 2BGESxXU
+# sU % 3DCGFQJFo2YC91q356gh3AvmYAJhx61kwaqQO3mQJkTajwuYaOBi"
+# export ACCESS_TOKEN = "1072560730451439616-owT3mm92S0Fc5sznvQ61i8WkmttWbB"
+# exportACCESS_TOKEN_SECRET = "2plWVwJjnTq2FaxZzfSCCatBPmLeAVfxsRgthbAFVcA3w"
+
 consumer_secret_key = os.environ.get('API_SECRET_KEY')
 consumer_key = os.environ.get('API_KEY')
 bearer_token = os.environ.get('BEARER_TOKEN')
