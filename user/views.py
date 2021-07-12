@@ -1,14 +1,16 @@
-from django.shortcuts import render
 
-from django.http import HttpResponse
-
+from django.views.generic import ListView, DetailView
 
 from .models import User
 
 # Create your views here.
 
 
-def index(request):
-    # index
-    output = "hello world"
-    return HttpResponse(output)
+class UserListView(ListView):
+    model = User
+    template_name = 'home.html'
+
+
+class UserDetailView(DetailView):
+    model = User
+    template_name = 'detail.html'
