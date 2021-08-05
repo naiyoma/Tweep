@@ -1,24 +1,58 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href='/static/css/style.css' />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>My Blog</title>
   </head>
   <body>
-    <header>
-      <h1><a href="">Tweepy</a></h1>
-    </header>
-    <div class="container">
-      {% block content %} {% for i in object_list %}
-      <div class="article">
-        <h3><a href="">{{ i.title }}</a></h3>
-        <p>{{ i.body }}</p>
-      </div>
-      {% endfor %} {% endblock content %}
-    </div>
+  {{tweet_text}}
+  {{tweet_user}}
+  {{tweet_user_location}}
+  {{tweet_tweet_location}}
+<table>
+  <thead>
+    <tr>
+      <th>Crypto Sign</th>
+      <th>Number Of tweets </th>
+      <th>Country/Popularity</th>
+      <th>Current Price(In Ksh)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-column="Tweet Number">Litecoin</td>
+      <td data-column="Tweet Interactions">{{lt_num}}</td>
+      <td data-column="Job Title">{{lt_interactions}}</td>
+      <td data-column="Twitter"></td>
+    </tr>
+    <tr>
+      <td data-column="Tweet Number">Ethereum</td>
+      <td data-column="Last Name">{{et_num}}</td>
+      <td data-column="Job Title">{{et_interactions}}</td>
+      <td data-column="Twitter"></td>
+    </tr>
+    <tr>
+      <td data-column="Tweet Number">Degecoin</td>
+      <td data-column="Last Name">{{dg_num}}</td>
+      <td data-column="Job Title">{{dg_interactions}}</td>
+      <td data-column="Twitter"></td>
+    </tr>
+    <tr>
+      <td data-column="Tweet Number">XRP</td>
+      <td data-column="Last Name">{{xrp_num}}</td>
+      <td data-column="Job Title">{{xrp_interactions}}</td>
+      <td data-column="Twitter"></td>
+    </tr>
+    <tr>
+      <td data-column="Tweet Number">Cardano</td>
+      <td data-column="Last Name">{{ca_num}}</td>
+      <td data-column="Interactions">{{ca_interactions}}</td>
+      <td data-column="Twitter"></td>
+    </tr>
+  </tbody>
+</table>
   </body>
 </html>
