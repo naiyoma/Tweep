@@ -166,7 +166,7 @@ class UserListView(ListView):
         context['dg_num'] = len(dg_number)
         context["dg_interactions"] = interactions_dg
 
-        # search for ##Ethereum per minute
+        # search for ##Ethereum per minute.
         tweets = tweepy.Cursor(
             api.search,
             q="#Ethereum",
