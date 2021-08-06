@@ -58,7 +58,6 @@ class UserListView(ListView):
                     "hashtags": item.entities["hashtags"],
                     "status_count": item.user.statuses_count,
                     "followers_count": item.user.followers_count,
-                    "location": item.place,
                     "source_device": item.source,
                 }
 
