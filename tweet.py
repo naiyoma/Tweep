@@ -4,7 +4,6 @@ import tweepy
 import pandas
 from tweepy.auth import OAuthHandler
 
-f
 
 API_SECRET_KEY = "ZxXKs8gmfg6w61GIWkUhAfVV1HrI8S76oWbf6JMtk3jzJh9vRD"
 API_KEY = "yNtiYh9eA99AzeDAvj3eg8QcQ"
@@ -114,7 +113,7 @@ class UserListView(ListView):
     filtered_tweets_lt = [x for x in all_tweets_lt if x == current_time
                           or x == current_time - 1]
 
-    # Search #XRP per minute
+    # Search #XRP per minute and create a tweepy filter
     tweets = tweepy.Cursor(
         api.search,
         q="#XRP",
