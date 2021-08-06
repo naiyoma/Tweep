@@ -115,7 +115,7 @@ class UserListView(ListView):
     filtered_tweets_lt = [x for x in all_tweets_lt if x == current_time
                           or x == current_time - 1]
 
-    # Search #XRP per minute
+    # Search #XRP per minute and create a tweepy filter
     tweets = tweepy.Cursor(
         api.search,
         q="#XRP",
