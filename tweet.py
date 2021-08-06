@@ -128,7 +128,7 @@ class UserListView(ListView):
     filtered_tweets_bt = [x for x in all_tweets_bt if x == current_time
                           or x == current_time - 1]
 
-    # Search for #DogeCoin per minute.
+    # Search for #DogeCoin per minute and create a filter.
     tweets = tweepy.Cursor(
         api.search,
         q="#DogeCoin",
