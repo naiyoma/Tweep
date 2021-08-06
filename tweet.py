@@ -24,7 +24,7 @@ class UserListView(ListView):
     model = User
 
     def get_context_data(self, **kwargs):
-
+        # tweepy authentication.
         context = super(UserListView, self).get_context_data(**kwargs)
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
         auth.set_access_token(access_token, access_token_secret)
