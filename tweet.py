@@ -4,7 +4,6 @@ import tweepy
 import pandas
 from tweepy.auth import OAuthHandler
 
-f
 
 API_SECRET_KEY = "ZxXKs8gmfg6w61GIWkUhAfVV1HrI8S76oWbf6JMtk3jzJh9vRD"
 API_KEY = "yNtiYh9eA99AzeDAvj3eg8QcQ"
