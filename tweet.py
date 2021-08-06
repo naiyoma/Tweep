@@ -90,53 +90,53 @@ class UserListView(ListView):
 
     # search for Ethereum per minute
 
-    # tweets = tweepy.Cursor(
-    #     api.search,
-    #     q="#Ethereum",
-    #     lang="en",
-    #     start_time=start_time,
-    #     end_time=end_time,
-    #     tweet_mode="extended").items(100)
-    # all_tweets_et = [tweet.created_at.minute for tweet in tweets]
-    # current_time = datetime.datetime.now().minute
-    # filtered_tweets_et = [x for x in all_tweets_et if x == current_time
-    #                       or x == current_time - 1]
+    tweets = tweepy.Cursor(
+        api.search,
+        q="#Ethereum",
+        lang="en",
+        start_time=start_time,
+        end_time=end_time,
+        tweet_mode="extended").items(100)
+    all_tweets_et = [tweet.created_at.minute for tweet in tweets]
+    current_time = datetime.datetime.now().minute
+    filtered_tweets_et = [x for x in all_tweets_et if x == current_time
+                          or x == current_time - 1]
 
-    # # search for #Litecoin per  minute
-    # tweets = tweepy.Cursor(
-    #     api.search,
-    #     q="#Litecoin",
-    #     lang="en",
-    #     start_time=start_time,
-    #     end_time=end_time,
-    #     tweet_mode="extended").items(100)
-    # all_tweets_lt = [tweet.created_at.minute for tweet in tweets]
-    # current_time = datetime.datetime.now().minute
-    # filtered_tweets_lt = [x for x in all_tweets_lt if x == current_time
-    #                       or x == current_time - 1]
+    # search for #Litecoin per  minute
+    tweets = tweepy.Cursor(
+        api.search,
+        q="#Litecoin",
+        lang="en",
+        start_time=start_time,
+        end_time=end_time,
+        tweet_mode="extended").items(100)
+    all_tweets_lt = [tweet.created_at.minute for tweet in tweets]
+    current_time = datetime.datetime.now().minute
+    filtered_tweets_lt = [x for x in all_tweets_lt if x == current_time
+                          or x == current_time - 1]
 
-    # # Search #XRP per minute
-    # tweets = tweepy.Cursor(
-    #     api.search,
-    #     q="#XRP",
-    #     lang="en",
-    #     start_time=start_time,
-    #     end_time=end_time,
-    #     tweet_mode="extended").items(100)
-    # all_tweets_bt = [tweet.created_at.minute for tweet in tweets]
-    # current_time = datetime.datetime.now().minute
-    # filtered_tweets_bt = [x for x in all_tweets_bt if x == current_time
-    #                       or x == current_time - 1]
+    # Search #XRP per minute
+    tweets = tweepy.Cursor(
+        api.search,
+        q="#XRP",
+        lang="en",
+        start_time=start_time,
+        end_time=end_time,
+        tweet_mode="extended").items(100)
+    all_tweets_bt = [tweet.created_at.minute for tweet in tweets]
+    current_time = datetime.datetime.now().minute
+    filtered_tweets_bt = [x for x in all_tweets_bt if x == current_time
+                          or x == current_time - 1]
 
-    # # Search for #DogeCoin per minute
-    # tweets = tweepy.Cursor(
-    #     api.search,
-    #     q="#DogeCoin",
-    #     lang="en",
-    #     start_time=start_time,
-    #     end_time=end_time,
-    #     tweet_mode="extended").items(100)
-    # all_tweets_dg = [tweet.created_at.minute for tweet in tweets]
-    # current_time = datetime.datetime.now().minute
-    # filtered_tweets_dg = [x for x in all_tweets_dg if x == current_time
-    #                       or x == current_time - 1]
+    # Search for #DogeCoin per minute
+    tweets = tweepy.Cursor(
+        api.search,
+        q="#DogeCoin",
+        lang="en",
+        start_time=start_time,
+        end_time=end_time,
+        tweet_mode="extended").items(100)
+    all_tweets_dg = [tweet.created_at.minute for tweet in tweets]
+    current_time = datetime.datetime.now().minute
+    filtered_tweets_dg = [x for x in all_tweets_dg if x == current_time
+                          or x == current_time - 1]

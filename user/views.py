@@ -100,7 +100,7 @@ class UserListView(ListView):
         context['xrp_num'] = len(xrp_number)
         context["xrp_interactions"] = interactions_xrp
 
-        # search for ##Litecoin per minute
+        # search for #Litecoin per minute
         tweets = tweepy.Cursor(
             api.search,
             q="#Litecoin",
