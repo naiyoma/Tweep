@@ -44,6 +44,7 @@ class UserListView(ListView):
             print(" ...... new page", page_num)
             page_num += 1
             # loop through item pages and create a dictionary for mined data.
+            # get data from each tweepy and storing it in dict.
             for item in page:
                 mined = {
                     "tweet_id": item.id,
