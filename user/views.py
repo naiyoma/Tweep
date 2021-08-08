@@ -28,7 +28,7 @@ class UserListView(ListView):
         auth.set_access_token(access_token, access_token_secret)
         api = tweepy.API(auth, wait_on_rate_limit=True)
         context = super(UserListView, self).get_context_data(**kwargs)
-
+        # 1.get end time as the current time
         end_time = datetime.datetime.now().replace(microsecond=0)
         start_time = (datetime.datetime.now().replace(
             microsecond=0) - datetime.timedelta(minutes=1))
