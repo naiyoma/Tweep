@@ -64,7 +64,7 @@ class UserListView(ListView):
                 ca_retweets_count.append(tweet.retweet_count)
             except:
                 pass
-
+        # 1.add ca num and pass it to context data
         context['ca_num'] = len(ca_number)
         context["ca_interactions"] = interactions_ca
 
