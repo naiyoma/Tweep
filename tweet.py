@@ -75,7 +75,7 @@ class UserListView(ListView):
                     f"{query}_{page_num}_{date_label}.csv", index=False)
                 print("  ..... resetting df")
                 data = get_df()
-
+        # 1.get the label and use it in csv file.
         date_label = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         data.to_csv(f"{query}_{page_num}_{date_label}.csv", index=False)
         context['tweet_tweet_location'] = df.to_dict()['col1'][0]
