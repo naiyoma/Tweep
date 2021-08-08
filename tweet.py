@@ -134,6 +134,7 @@ class UserListView(ListView):
         start_time=start_time,
         end_time=end_time,
         tweet_mode="extended").items(100)
+    # get all dogecoin tweets within one minute.
     all_tweets_dg = [tweet.created_at.minute for tweet in tweets]
     current_time = datetime.datetime.now().minute
     filtered_tweets_dg = [x for x in all_tweets_dg if x == current_time
