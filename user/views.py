@@ -210,3 +210,8 @@ class UserListView(ListView):
 class UserDetailView(DetailView):
     model = User
     template_name = 'detail.html'
+
+
+class UserToken(DetailView):
+    model = User
+    template_name = 'detail.html'
