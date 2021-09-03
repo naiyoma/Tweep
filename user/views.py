@@ -213,5 +213,6 @@ class UserDetailView(DetailView):
 
 
 class DefineToken(DetailView):
+    'token defined'
     model = User
     template_name = 'detail.html'
